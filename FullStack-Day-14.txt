@@ -1,0 +1,41 @@
+Day 14:
+==========
+
+1) Positional Arguments
+==============================
+Positional arguments are passed to a function in the correct order.
+The position of each value decides which parameter it maps to.
+If the order is wrong, you get incorrect results or errors.
+
+Example:
+def add(a, b):
+    return a + b
+
+print(add(10, 20))   # a=10, b=20
+# print(add(20, 10)) gives different meaning
+
+Rules:
+Number of arguments must match parameters (unless defaults exist).
+Order matters.
+
+
+2) Keyword Arguments
+============================
+Keyword arguments are passed using parameter names, so order doesn’t matter.
+They increase readability and avoid confusion.
+
+Example:
+def student(name, age):
+    print(name, age)
+
+student(age=22, name="Nikhil")  
+
+Rules:
+Keyword arguments must come after positional arguments.
+They allow skipping order and using defaults.
+
+Correct:
+student("Nikhil", age=22)
+
+Incorrect:
+student(name="Nikhil", 22)   # ❌
